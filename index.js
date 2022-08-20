@@ -5,7 +5,7 @@ const port = 80
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
-app.get('/api/random/:id', (req, res) => {
+app.get('/api/random/:id?', (req, res) => {
   let min = 1
   let max = req.params.id || 100
   let randnum = Math.floor(Math.random() * (max - min) + min)
